@@ -14,7 +14,7 @@ const Cabecalho = () => {
                     Home
                 </CabecalhoLink>
                 <CabecalhoLink to="">
-                    Home
+                    Favoritos
                 </CabecalhoLink>
             </nav>
         </header>
