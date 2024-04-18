@@ -9,3 +9,8 @@
     font-size: 18px;
     color: var(--branco);
 }
+
+.rodape a {
+    color: var(--branco);
+    text-decoration: none;
+}
