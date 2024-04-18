@@ -1,6 +1,8 @@
+import Cabecalho from "components/Cabecalho";
+
 const Inicio = () => {
     return (
-        <h1>Olá Mundo, Teste!</h1>
+        <Cabecalho />
     )
 }
 
