@@ -2,7 +2,8 @@ import Banner from 'components/Banner';
 import Card from 'components/Card';
 import Titulo from 'components/Titulo';
 import styles from './Inicio.module.css';
-import listaFilmes from 'json/db.json'
+import listaFilmes from 'json/db.json';
+
 const Inicio = () => {
     return (
         <>

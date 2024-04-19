@@ -21,3 +21,9 @@
     width: 25px;
     cursor: pointer;
 }
+
+.link {
+    text-decoration: none;
+    color: var(--preto);
+    text-align: left;
+}
