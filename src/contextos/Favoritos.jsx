@@ -1,9 +1,9 @@
-const { createContext, useState } = require("react");
+const { createContext, useState, useContext } = require("react");
 
-const FavoritosContext = createContext();
+export const FavoritosContext = createContext();
 FavoritosContext.displayName = 'Favoritos';
 
-const FavoritosProvider = ({ children }) => {
+export default function FavoritosProvider({ children }){
     const [ favorito, setFavorito ] = useState([]);
 
     return (
@@ -14,4 +14,26 @@ const FavoritosProvider = ({ children }) => {
     )
 }
 
-export default FavoritosProvider;
+export const useFavoritoContext = () => {
+    const { favorito, setFavorito } = useContext(FavoritosContext);
+    
+    let novaListaFavoritos = [...favorito];
+    
+    const adicionarFavorito = (novoFavorito) => {
+        const favoritoRepetido = favorito.some(item => item.id === novoFavorito.id);
+
+        if(!favoritoRepetido){
+            novaListaFavoritos.push(novoFavorito);
+            return setFavorito(novaListaFavoritos);
+        }
+
+        novaListaFavoritos.splice(novaListaFavoritos.indexOf(novoFavorito), 1);
+        return setFavorito(novaListaFavoritos);
+        
+    }
+
+    return {
+        favorito,
+        adicionarFavorito
+    }
+}
