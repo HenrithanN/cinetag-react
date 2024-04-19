@@ -3,6 +3,7 @@ import styles from './Player.module.css';
 import Banner from 'components/Banner';
 import { useParams } from 'react-router-dom';
 import listaFilmes from 'json/db.json'
+import NaoEncontrada from 'pages/NaoEncontrado';
 
 const Player = () => {
 
@@ -11,7 +12,7 @@ const Player = () => {
 
 
     if (!filmeSelecionado) {
-        return <h1>Nao encontrado</h1>
+        return <NaoEncontrada />
     }
 
     return (
