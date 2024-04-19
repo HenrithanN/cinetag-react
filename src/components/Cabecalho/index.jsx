@@ -6,14 +6,14 @@ import CabecalhoLink from '../CabecalhoLink';
 const Cabecalho = () => {
     return (
         <header className={styles.cabecalho}>
-            <Link>
+            <Link to="/">
                 <img src={logo} alt="Logo do Cinetag" />
             </Link>
             <nav>
-                <CabecalhoLink to="./">
+                <CabecalhoLink url="/">
                     Home
                 </CabecalhoLink>
-                <CabecalhoLink to="">
+                <CabecalhoLink url="favoritos">
                     Favoritos
                 </CabecalhoLink>
             </nav>
