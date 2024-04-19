@@ -13,4 +13,10 @@
 .rodape a {
     color: var(--branco);
     text-decoration: none;
+    transition: 5s;
+}
+
+.rodape a:hover {
+    color: var(--preto);
+    transition: 5s;
 }
